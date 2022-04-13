@@ -1,3 +1,8 @@
+require('dotenv').config();
+const alchemyKey = process.env.ALCHEMY_WEBSOCKETS_URL;
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
+const web3 = createAlchemyWeb3(alchemyKey);
+
 //export const helloWorldContract;
 
 export const loadCurrentMessage = async () => { 
