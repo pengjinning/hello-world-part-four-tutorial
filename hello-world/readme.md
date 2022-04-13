@@ -1,4 +1,4 @@
-# 说明
+# 说明 hardhat
 
 - <https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract>
 - <https://ropsten.etherscan.io/>
