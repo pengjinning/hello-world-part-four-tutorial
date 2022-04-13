@@ -20,4 +20,6 @@ npx hardhat run scripts/deploy.js --network ropsten
 npx hardhat run scripts/interact.js
 # node interact.js # truffle
 npx hardhat run scripts/interact.js --network ropsten
+# 提交代码到etherscan
+npx hardhat verify --network ropsten '0xA39dEC4F469cbc54Cdf23a7B137C162246DE46bB' 'Hello World!'
 ```
