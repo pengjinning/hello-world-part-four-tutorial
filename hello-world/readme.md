@@ -6,5 +6,8 @@
 # 使用步骤
 yarn init
 yarn add hardhat --dev
+yarn add dotenv
+yarn add @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 npx hardhat
+npx hardhat compile
 ```
