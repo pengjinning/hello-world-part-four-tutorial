@@ -19,7 +19,8 @@ const HelloWorld = () => {
 
   //called only once
   useEffect(async () => {
-    
+    const message = await loadCurrentMessage();
+    setMessage(message);
   }, []);
 
   function addSmartContractListener() { //TODO: implement
