@@ -19,14 +19,15 @@ const HelloWorld = () => {
 
   //called only once
   useEffect(async () => {
+    //
     const message = await loadCurrentMessage();
     setMessage(message);
     addSmartContractListener();
-
+    //
     const { address, status } = await getCurrentWalletConnected();
     setWallet(address);
     setStatus(status);
-
+    //
     addWalletListener();
   }, []);
 
@@ -53,7 +54,8 @@ const HelloWorld = () => {
   };
 
   const onUpdatePressed = async () => { //TODO: implement
-    
+    const { status } = await updateMessage(walletAddress, newMessage);
+    setStatus(status);
   };
 
   //the UI of our component

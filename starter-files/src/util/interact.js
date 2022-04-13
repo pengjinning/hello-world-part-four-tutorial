@@ -89,4 +89,26 @@ export const updateMessage = async (address, message) => {
             status: "❌ Your message cannot be an empty string.",
         };
     }
+
+    //set up transaction parameters
+    const transactionParameters = {
+        to: contractAddress, // Required except during contract publications.
+        from: address, // must match user's active address.
+        data: helloWorldContract.methods.update(message).encodeABI(),
+    };
+
+    //sign the transaction
+    try {
+        const txHash = await window.ethereum.request({
+            method: "eth_sendTransaction",
+            params: [transactionParameters],
+        });
+        return {
+            status: " ",
+        };
+  } catch (error) {
+    return {
+        status: "😥 " + error.message,
+    };
+}
 };
