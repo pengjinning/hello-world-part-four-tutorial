@@ -10,4 +10,5 @@ yarn add @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 npx hardhat
 mkdir contracts
 mkdir scripts
+npx hardhat compile
 ```
