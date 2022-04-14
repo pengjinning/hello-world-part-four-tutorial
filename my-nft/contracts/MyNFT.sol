@@ -14,6 +14,7 @@ contract MyNFT is ERC721, Ownable {
 
     constructor() ERC721("MyNFT", "NFT") {}
 
+    // "Minting an NFT" is the act of publishing a unique instance of your ERC721 token on the blockchain.
     function mintNFT(address recipient, string memory tokenURI)
         public onlyOwner
         returns (uint256)
